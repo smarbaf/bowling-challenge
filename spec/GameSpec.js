@@ -24,5 +24,10 @@ it("limits the game to 20 rolls", function() {
     expect(function(){game.roll(4)}).toThrow();
   });
 
+it("limits the roll score to 10", function() {
+    game = new Game();
+    expect(function(){game.roll(11)}).toThrow();
+  });
+
 });
 
